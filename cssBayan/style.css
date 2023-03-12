@@ -3,19 +3,22 @@
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Montserrat';
 }
 
 .accordion-content {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 1rem;
+  width: 100%;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: 0.5s;
+  transform: scale(0.8);
 }
 
 .img_plus {
-  display: block;
   height: 2rem;
   width: 2rem;
   background-image: url(./src/plus-solid.svg);
@@ -24,11 +27,24 @@
   background-position-x: right;
   align-self: center;
   transition: 0.5s;
+  display: none;
+}
+
+.accordion:hover>label>.img_plus {
+  display: block;
+  transition: 0.5s;
 }
 
 input[type=checkbox]:checked+label>.accordion-content {
   opacity: 1;
   max-height: 100%;
+  transform: scale(1);
+}
+
+label:hover>.accordion-content {
+  opacity: 1;
+  max-height: 100%;
+  transform: scale(1);
 }
 
 input[type=checkbox]:checked+label>.img_plus {
@@ -43,10 +59,22 @@ input[type=checkbox]:checked+label>.img_plus {
   justify-content: space-between;
   width: 100%;
   font-size: 2rem;
+  color: black;
+}
+
+@media only screen and (min-width: 820px) {
+  .label:hover {
+    color: blue;
+    transition: 0.5s;
+  }
 }
 
 .accordion {
   margin-bottom: 1rem;
+}
+
+.accordion:hover {
+  cursor: pointer;
 }
 
 #accordion-1,
@@ -67,7 +95,8 @@ input[type=checkbox]:checked+label>.img_plus {
 
 .line {
   height: 1em;
-  border-bottom: solid gray;
+  border-bottom: 0.1em solid #ccc;
+  box-shadow: 0 0.4em 0.4em -0.4em rgb(0 0 0 / 30%);
 }
 
 .h1 {
@@ -83,7 +112,7 @@ input[type=checkbox]:checked+label>.img_plus {
     font-size: 1rem;
   }
 
-  .img_plus{
+  .img_plus {
     height: 1rem;
     width: 1rem;
   }
@@ -98,4 +127,3 @@ input[type=checkbox]:checked+label>.img_plus {
     max-width: 95%;
   }
 }
-
