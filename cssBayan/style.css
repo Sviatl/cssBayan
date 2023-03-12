@@ -51,6 +51,7 @@
 }
 
 .p_lable {
+  display: block;
   width: 90%;
   color: blue;
   margin-top: 0;
