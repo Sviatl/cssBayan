@@ -14,7 +14,7 @@
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.2s;
   transform: scale(0.8);
 }
 
@@ -26,7 +26,7 @@
   width: 100%;
   font-size: 2rem;
   color: black;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 .img_plus {
@@ -45,6 +45,8 @@
 .p_lable {
   width: 90%;
   color: blue;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 input[type=radio]:checked+label>.p_lable {
@@ -118,12 +120,12 @@ input[type=radio]:checked+label>.img_plus {
 
 input[type=radio]:checked+label>.accordion-content>.img_mem {
   max-height: 100%;
-  transform: 1s;
+  transform: 0.4s;
 }
 
 .accordion:hover>label>.accordion-content>.img_mem {
   max-height: 100%;
-  transform: 1s ease;
+  transform: 0.4s ease;
 }
 
 
