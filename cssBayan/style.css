@@ -6,6 +6,14 @@
   font-family: 'Montserrat';
 }
 
+.accordion {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: 2s;
+}
+
 .accordion-content {
   margin-left: auto;
   margin-right: auto;
@@ -93,10 +101,6 @@ input[type=radio]:checked+label>.img_plus {
   }
 }
 
-.accordion {
-  margin-bottom: 1rem;
-}
-
 .accordion:hover {
   cursor: pointer;
 }
@@ -120,12 +124,12 @@ input[type=radio]:checked+label>.img_plus {
 
 input[type=radio]:checked+label>.accordion-content>.img_mem {
   max-height: 100%;
-  transform: 0.4s;
+  transition: 0.4s;
 }
 
 .accordion:hover>label>.accordion-content>.img_mem {
   max-height: 100%;
-  transform: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 
