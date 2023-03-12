@@ -1,6 +1,6 @@
 .wrapper {
   box-sizing: border-box;
-  max-width: 80%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Montserrat';
@@ -28,14 +28,29 @@
   align-self: center;
   transition: 0.5s;
   display: none;
+  justify-self: flex-end;
 }
+
+.p_lable {
+  width: 90%;
+  color: blue;
+}
+
+input[type=radio]:checked+label>.p_lable {
+  color: black;
+}
+
+.accordion:hover>label>.p_lable {
+  color: black;
+}
+
 
 .accordion:hover>label>.img_plus {
   display: block;
   transition: 0.5s;
 }
 
-input[type=checkbox]:checked+label>.accordion-content {
+input[type=radio]:checked+label>.accordion-content {
   opacity: 1;
   max-height: 100%;
   transform: scale(1);
@@ -47,7 +62,12 @@ label:hover>.accordion-content {
   transform: scale(1);
 }
 
-input[type=checkbox]:checked+label>.img_plus {
+label:hover>.img_plus {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+input[type=radio]:checked+label>.img_plus {
   transform: rotate(45deg);
   transition: 0.5s;
 }
@@ -62,7 +82,7 @@ input[type=checkbox]:checked+label>.img_plus {
   color: black;
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 850px) {
   .label:hover {
     color: blue;
     transition: 0.5s;
@@ -103,9 +123,35 @@ input[type=checkbox]:checked+label>.img_plus {
   font-size: 3rem;
 }
 
-@media (max-width: 820px) {
+input[type="radio"]+label:active>.p_lable,
+input[type="radio"]+label:active>.img_plus,
+input[type="radio"]+label:active>.accordion-content {
+  color: blue;
+  opacity: 50%;
+}
+
+@media (max-width: 850px) {
   .wrapper {
     max-width: 90%;
+  }
+
+  .label {
+    font-size: 1.5rem;
+  }
+
+  .img_plus {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 95%;
   }
 
   .label {
@@ -119,11 +165,5 @@ input[type=checkbox]:checked+label>.img_plus {
 
   .h1 {
     font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .wrapper {
-    max-width: 95%;
   }
 }
